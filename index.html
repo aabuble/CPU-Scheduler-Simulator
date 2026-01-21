@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>CPU scheduler simulator</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link href="styles.css" rel="stylesheet" type="text/css" />
+</head>
+<header>
+    <h2>Premendo il tasto start verrà generata la tabella dei processi </h2>
+</header>
+<main>Priority Round Robin è un algoritmo di scheduling che dà un time slice ad ogni processo andando in ordine di priorità
+    <br>
+    <div> <button id="Input" onclick="input()"> Mostra / Nascondi </button> <br>
+    <div id="box">
+        <div id="processo"></div>
+        <input id="inTa" placeholder ="tempo di arrivo">
+        <input id="inTb" placeholder ="tempo di burst">
+        <input id="inPr" placeholder ="priorità"> <br> 
+        <br>
+        <button id="Register" onclick="register()"> Registra </button>
+
+    </div>
+</div> 
+
+
+</main>
+<body>
+<div class="container">
+   <h2>CPU scheduler simulator</h2>
+   <div>
+       <div>
+          <button id="idStart" onclick="start()"> Start </button>
+          <button id="idReset" onclick="reset()"> Reset </button>
+       </div>
+       <div>
+           <table class="table" id="idTable">
+               <thead class="table-light">
+                   <tr>
+                   <th>Process</th>
+                       <th>Arrival Time</th>
+                       <th>Burst Time</th>
+                       <th>Remaining Burst Time</th>
+                       <th>Priority</th>
+                   </tr>
+               </thead>
+               <tbody>
+               </tbody>
+           </table>
+       </div>
+   </div>
+   <div id="output" style="display: none">
+       <p>Di seguito l'evoluzione dei processi: </p>
+       <div class="progress" >
+           <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+               P1
+           </div>
+           <div class="progress-bar progress-bar-warning" role="progressbar" style="width:35%">  P2  </div>
+           <div class="progress-bar progress-bar-danger" role="progressbar" style="width:25%">  P3  </div>
+       </div>
+       <div class="progress" id="output_demo" style="display: none">
+           <div class="progress-bar progress-bar-success" role="progressbar" id="p1"></div>
+           <div class="progress-bar progress-bar-warning" role="progressbar" id="p2"></div>
+           <div class="progress-bar progress-bar-danger" role="progressbar" id="p3"></div>
+       </div>
+   </div>
+</div>
+<script src="script.js"></script>
+</body>
+<credits></credits>
+</html>
