@@ -10,16 +10,17 @@
       <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <header>
-    <h2>Premendo il tasto start verrà generata la tabella dei processi </h2>
+    <h2  id="center">Priority Round Robin</h2>
 </header>
-<main>Priority Round Robin è un algoritmo di scheduling che dà un time slice ad ogni processo andando in ordine di priorità
+<main id="center">Priority Round Robin è un algoritmo di scheduling che assegna una fetta di tempo ad ogni processo andando in ordine di priorità. <br>
+    Così facendo ogni algoritmo avrà pari tempo rendendo così il processo equo, se ci fosse stato il cambio di contesto molto probabilmente
     <br>
-    <div> <button id="Input" onclick="input()"> Mostra / Nascondi </button> <br>
-    <div id="box">
+    <div id="center"> <button id="Input" onclick="input()"> Mostra / Nascondi </button> <br>
+    <div id="box"> <br>
         <div id="processo"></div>
-        <input id="inTa" placeholder ="tempo di arrivo">
-        <input id="inTb" placeholder ="tempo di burst">
-        <input id="inPr" placeholder ="priorità"> <br> 
+        <input id="InTa" placeholder ="tempo di arrivo">
+        <input id="InTb" placeholder ="tempo di burst">
+        <input id="InPr" placeholder ="priorità"> <br> 
         <br>
         <button id="Register" onclick="register()"> Registra </button>
 
